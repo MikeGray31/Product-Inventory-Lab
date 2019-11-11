@@ -10,7 +10,7 @@ public class SneakerTest {
 
         int expected = 4012;
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setId(expected);
 
         Assert.assertEquals(expected, testSneaker.getId());
@@ -21,7 +21,7 @@ public class SneakerTest {
 
         String expected = "OZWEEGO";
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setName(expected);
 
         Assert.assertEquals(expected, testSneaker.getName());
@@ -32,7 +32,7 @@ public class SneakerTest {
 
         String expected = "This is a brand";
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setBrand(expected);
 
         Assert.assertEquals(expected, testSneaker.getBrand());
@@ -44,7 +44,7 @@ public class SneakerTest {
 
         String expected = "CalvinBall";
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setSport(expected);
 
         Assert.assertEquals(expected, testSneaker.getSport());
@@ -55,7 +55,7 @@ public class SneakerTest {
 
         float expected = 12;
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setSize(expected);
 
         Assert.assertEquals(expected, testSneaker.getSize(), 0.0);
@@ -66,7 +66,7 @@ public class SneakerTest {
 
         int expected = 120;
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setQty(expected);
 
         Assert.assertEquals(expected, testSneaker.getQty());
@@ -77,9 +77,30 @@ public class SneakerTest {
 
         float expected = 60;
 
-        Sneakers testSneaker = new Sneakers();
+        Sneaker testSneaker = new Sneaker();
         testSneaker.setPrice(expected);
 
         Assert.assertEquals(expected, testSneaker.getPrice(), 0.0);
+    }
+
+    @Test
+    public void constructorTest(){
+
+        int expectedId = 6;
+        String expectedName = "Stan Smith";
+        String expectedBrand = "Adidas";
+        String expectedSport = "Tennnis";
+        int expectedQty = 10;
+        float expectedPrice = 80.00f;
+
+        Sneaker testSneaker = new Sneaker(expectedId, expectedName, expectedBrand,
+                expectedSport, expectedQty,expectedPrice);
+
+        Assert.assertEquals(expectedId, testSneaker.getId());
+        Assert.assertEquals(expectedName, testSneaker.getName());
+        Assert.assertEquals(expectedBrand, testSneaker.getBrand());
+        Assert.assertEquals(expectedSport, testSneaker.getSport());
+        Assert.assertEquals(expectedQty, testSneaker.getQty());
+        Assert.assertEquals(expectedPrice, testSneaker.getPrice(), 0.0);
     }
 }
