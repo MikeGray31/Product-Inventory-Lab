@@ -89,7 +89,7 @@ public class SneakerTest {
         int expectedId = 6;
         String expectedName = "Stan Smith";
         String expectedBrand = "Adidas";
-        String expectedSport = "Tennnis";
+        String expectedSport = "Tennis";
         int expectedQty = 10;
         float expectedPrice = 80.00f;
 
